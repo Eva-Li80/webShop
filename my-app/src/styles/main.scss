@@ -1,3 +1,32 @@
-@import "./variables";
-@import "./head"
+
+
+
+
+
+//variables & functions
+@import "./vaiables/variables";
+@import "./Functions/functions";
+@import "./Functions/mixins";
+
+
+//base & layout
+@import "./base";
+
+
+//colors
+
+
+//components button, card, navbar mm
+@import "./stylescomponents/head";
+@import "./stylescomponents/navbar";
+@import "./stylescomponents/foot";
+@import "./stylescomponents/midle"
+
+
+//utilities margin padding opacity mm
+
+
+
+
+
 

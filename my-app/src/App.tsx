@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
 import "./styles/main.scss"
-import Header from './Components/Header';
+import Head from './Components/Head';
+import Naven from './Components/Naven';
+import Foot from './Components/Foot';
+import Midle from './Components/Midle';
 
 function App() {
   return (
     <div>
       <h1>test</h1>
-      <Header />
+      <Head />
+      <Naven />
+      <Midle />
+      <Foot />
     </div>
   );
 }

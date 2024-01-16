@@ -1,0 +1,48 @@
+@mixin standard-padding-margin() {
+    padding: 15px;
+    margin: 15px;
+  }
+  
+  @mixin flexdirection($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+  }
+  
+  @mixin display-footer() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  @mixin theme($light-theme: true){
+      @if $light-theme {
+          background: lighten($color-pink, 100%);
+          color: darken($color-pink, 100%)
+      }
+  }
+  
+  @mixin mobile{
+      @media (max-width: $mobile){
+          @content;
+      }
+  }
+  
+  //eachloop
+  @each $key, $val in $colors {
+    .text-#{$key} {
+      color: $val;
+    }
+    .bg-#{$key} {
+      background-color: $val;
+    }
+  }
+
+  //if
+  @if (10 > 5) {
+    .test-if {
+      color: black;
+    }
+  }
+  

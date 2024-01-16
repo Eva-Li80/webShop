@@ -1,0 +1,91 @@
+.navbar {
+    background-color: $color-gray-dark;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+    .menu{
+      color: $color-white;
+    }
+  
+    .ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      color: $color-white;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.3s ease, opacity 0.3s ease; // Lägg till övergångseffekter
+    
+      &.open {
+        visibility: visible;
+        opacity: 1;
+      }
+  
+      .item {
+        margin: 0 20px 0 20px;
+        transition-delay: 0.1s; // Lägg till en övergångsförsening
+        background-color: $color-gray-dark; // Tydligare bakgrundsfärg för att visa förändring
+      }
+  
+      
+    }
+  
+    .link {
+      color: $color-white;
+      text-decoration: none;
+    }
+  
+    .menu-btn {
+      position: absolute;
+      z-index: 1;
+      right: 2rem;
+      top: 0.8rem;
+      height: 20px;
+      width: 28px;
+      cursor: pointer;
+  
+      .burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 28px;
+        height: 3px;
+        background-color: $color-white;
+  
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 28px;
+          height: 3px;
+          background-color: $color-white;
+        }
+  
+        &::before {
+          top: -0.8rem;
+        }
+  
+        &::after {
+          top: 0.8rem;
+        }
+  
+        &.open {
+          transform: rotate(720deg);
+          background-color: transparent;
+  
+          &::before {
+            transform: rotate(45deg) translate(2px, 8px);
+            top: 0;
+          }
+  
+          &::after {
+            width: 28px;
+            transform: rotate(-45deg) translate(2px, -8px);
+          }
+        }
+      }
+    }
+  }
+  

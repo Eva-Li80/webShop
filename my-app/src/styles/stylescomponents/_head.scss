@@ -1,0 +1,12 @@
+.head {
+    background-color: $color-gray-light;
+    width: 100%;
+    height: 15vh;
+    @include flexdirection(row);
+  
+    h1{
+      font-size: $base-size-large;
+    }
+  
+  }
+  
